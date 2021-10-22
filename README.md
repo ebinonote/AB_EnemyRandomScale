@@ -95,6 +95,9 @@ valueMath.pow(scale, 3)
 
 ## 更新履歴
 
+### Version 1.01
+
+敵キャラの色相が反映されていなかった不具合を修正しました。
 
 ### Version 1.00
 

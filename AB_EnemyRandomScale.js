@@ -1,6 +1,6 @@
 ﻿// =============================================================================
 // AB_EnemyRandomScale.js
-// Version: 1.00
+// Version: 1.01
 // -----------------------------------------------------------------------------
 // Copyright (c) 2021 ヱビ
 // Released under the MIT license
@@ -12,7 +12,7 @@
 
 
 /*:
- * @plugindesc v1.00 敵の大きさをランダムにし、能力値を変化させるプラグイン
+ * @plugindesc v1.01 敵の大きさをランダムにし、能力値を変化させるプラグイン
  * @author ヱビ
  * 
  * 
@@ -153,6 +153,9 @@
  * 更新履歴
  * ============================================================================
  * 
+ * Version 1.01
+ *   敵キャラの色相が反映されていなかった不具合を修正しました。
+ * 
  * Version 1.00
  *   公開
  * 
@@ -233,8 +236,8 @@
 // Sprite_Enemy
 //=============================================================================
 	const _Sprite_Enemy_prototype_loadBitmap = Sprite_Enemy.prototype.loadBitmap;
-	Sprite_Enemy.prototype.loadBitmap = function(name) {
-			_Sprite_Enemy_prototype_loadBitmap.call(this, name);
+	Sprite_Enemy.prototype.loadBitmap = function(name, hue) {
+			_Sprite_Enemy_prototype_loadBitmap.call(this, name, hue);
 	
 			if (this._enemy.ABScale) {
 				var scale = this._enemy.ABScale;
